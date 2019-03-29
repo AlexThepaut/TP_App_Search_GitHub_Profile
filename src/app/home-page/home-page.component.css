@@ -1,0 +1,11 @@
+.cardSearch {
+    max-width: 300px;
+    max-height: 175px;
+}
+
+.search-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

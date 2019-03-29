@@ -13,4 +13,12 @@ export class GithubApiService {
   getUser(login: string) {
     return this.http.get(`${API_BASE_URL}${API_USERS}${login}`);
   }
+
+  getUserRepo(login: string){
+    return this.http.get(`${API_BASE_URL}${API_USERS}${login}/repos`);
+  }
+
+  getUserFollowers(login: string){
+    return this.http.get(`${API_BASE_URL}${API_USERS}${login}/followers`);
+  }
 }

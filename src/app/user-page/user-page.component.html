@@ -1,1 +1,16 @@
-{{user?.avatar_url}}
+<mat-tab-group>
+    <mat-tab label="Followers">
+        <mat-grid-list cols="4" rowHeight="120px">
+            <mat-grid-tile *ngFor="let follower of followers">
+                <p>{{follower?.login}}</p><br>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </mat-tab>
+    <mat-tab label="Repository">
+        <mat-grid-list cols="6" rowHeight="80px">
+            <mat-grid-tile *ngFor="let repo of repos">
+                {{repo?.name}}
+            </mat-grid-tile>
+        </mat-grid-list>
+    </mat-tab>
+</mat-tab-group>

@@ -11,22 +11,35 @@ import { PATH_HOME } from '../app.routes.constantes';
 export class UserPageComponent implements OnInit {
 
   user: any;
+  repos: any;
+  followers: any;
 
   constructor(private route: ActivatedRoute, private apiGithub: GithubApiService, private router: Router) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe((param: ParamMap) => {
-      console.log(param.get('user'));
-      this.apiGithub.getUser(param.get('user')).subscribe(
+      let userToSearch: string = param.get('user');
+      this.apiGithub.getUser(userToSearch).subscribe(
         data => {
+          console.log(data);
           this.user = data;
-          console.log(data)
         },
         (error) => {
           this.router.navigate([PATH_HOME]);
         }
       );
+      this.apiGithub.getUserRepo(userToSearch).subscribe(
+        data => {
+          console.log(data);
+          this.repos = data;
+        }
+      );
+      this.apiGithub.getUserFollowers(userToSearch).subscribe(
+        data => {
+          console.log(data);
+          this.followers = data;
+        }
+      );
     })
   }
-
 }

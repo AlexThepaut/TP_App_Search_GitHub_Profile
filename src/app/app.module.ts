@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatButtonModule, MatCheckboxModule, MatInputModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -8,6 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UserPageComponent } from './user-page/user-page.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, MatTabsModule, MatGridListModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,13 @@ import { ROUTES } from './app.routes';
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(ROUTES),
+    BrowserAnimationsModule,
     MatButtonModule, 
     MatCheckboxModule,
-    MatInputModule
+    MatInputModule,
+    MatCardModule,
+    MatTabsModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

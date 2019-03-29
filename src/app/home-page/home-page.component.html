@@ -1,5 +1,11 @@
-<h1>GitHub Profile viewer</h1>
-
-Choisir un profile à visualiser :
-<input type="text" placeholder="Profil GitHub" (keyup)="updateUser($event)">
-<input type="button" value="Chercher" (click)="searchUser()">
+<div class="search-container">
+    <mat-card class="cardSearch">
+        <mat-card-title>GitHub Profile viewer</mat-card-title>
+        <mat-card-content>
+            <mat-form-field>
+                <input matInput color="warn" placeholder="Profil GitHub" (keyup)="updateUser($event)">
+            </mat-form-field>
+        </mat-card-content>
+        <button mat-raised-button color="warn" (click)="searchUser()">Click me!</button>
+    </mat-card>
+</div>

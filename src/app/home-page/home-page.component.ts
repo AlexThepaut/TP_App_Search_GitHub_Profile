@@ -10,7 +10,7 @@ import { PATH_USER } from '../app.routes.constantes';
 })
 export class HomePageComponent implements OnInit {
 
-  userName: string;
+  userName: string = "";
 
   constructor(private router: Router) { }
 
@@ -19,7 +19,9 @@ export class HomePageComponent implements OnInit {
   }
 
   searchUser(){
-    this.router.navigate([PATH_USER, this.userName]);
+    if(this.userName.length > 0){
+      this.router.navigate([PATH_USER, this.userName]);
+    }
   }
 
   ngOnInit() {
