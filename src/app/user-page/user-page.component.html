@@ -7,10 +7,10 @@
         </mat-grid-list>
     </mat-tab>
     <mat-tab label="Repository">
-        <mat-grid-list cols="6" rowHeight="80px">
-            <mat-grid-tile *ngFor="let repo of repos">
-                {{repo?.name}}
-            </mat-grid-tile>
-        </mat-grid-list>
+        <mat-list cols="6" rowHeight="80px">
+            <mat-list-item *ngFor="let repo of repos">
+                <app-repo-github [repo]="repo"></app-repo-github>
+            </mat-list-item>
+        </mat-list>
     </mat-tab>
 </mat-tab-group>
