@@ -16,12 +16,15 @@ export class UserPageComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private apiGithub: GithubApiService, private router: Router) { }
 
+  toHome() {
+    this.router.navigate([PATH_HOME]);
+  }
+
   ngOnInit() {
     this.route.paramMap.subscribe((param: ParamMap) => {
-      let userToSearch: string = param.get('user');
+      const userToSearch: string = param.get('user');
       this.apiGithub.getUser(userToSearch).subscribe(
         data => {
-          console.log(data);
           this.user = data;
         },
         (error) => {
@@ -36,10 +39,9 @@ export class UserPageComponent implements OnInit {
       );
       this.apiGithub.getUserFollowers(userToSearch).subscribe(
         data => {
-          console.log(data);
           this.followers = data;
         }
       );
-    })
+    });
   }
 }

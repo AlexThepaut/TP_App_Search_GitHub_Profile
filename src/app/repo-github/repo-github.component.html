@@ -1,5 +1,16 @@
-<div>{{repo?.name}}</div>
-<div>
-  Watchers : 
-  {{repo?.watchers}}
+<div class="repo">
+    <div class="repo-container">
+        <a class="repo__name">{{repo?.name}}</a>
+        <a class="repo__info">
+            <a class="repo__langage">{{repo?.language}}</a>
+            <div>
+                <span class="repo__info repo__forks">
+                    <mat-icon class="space">merge_type</mat-icon> {{repo?.forks}}
+                </span>
+                <span class="repo__info repo__watchers">
+                    <mat-icon class="space">remove_red_eye</mat-icon>{{repo?.watchers}}
+                </span>
+            </div>
+        </a>
+    </div>
 </div>

@@ -8,29 +8,42 @@ import { UserPageComponent } from './user-page/user-page.component';
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, MatTabsModule, MatGridListModule, MatIconModule, MatListModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatCheckboxModule,
+  MatInputModule,
+  MatCardModule,
+  MatTabsModule,
+  MatGridListModule,
+  MatIconModule,
+  MatListModule,
+  MatDividerModule
+} from '@angular/material';
 import { RepoGithubComponent } from './repo-github/repo-github.component';
+import { FollowGithubComponent } from './follow-github/follow-github.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     UserPageComponent,
-    RepoGithubComponent
+    RepoGithubComponent,
+    FollowGithubComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(ROUTES),
     BrowserAnimationsModule,
-    MatButtonModule, 
+    MatButtonModule,
     MatCheckboxModule,
     MatInputModule,
     MatCardModule,
     MatTabsModule,
     MatGridListModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

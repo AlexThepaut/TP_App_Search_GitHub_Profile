@@ -1,4 +1,27 @@
-.repo__line{
+.repo__name{
+}
+
+
+.repo-container{
     display: flex;
+    align-items: center;
+    width: 100%;
     justify-content: space-between;
+}
+
+.repo__info{
+    display: flex;
+    align-items: center;
+}
+
+.repo__langage{
+    margin-right: 30px;
+}
+
+.repo{
+    display: inline;
+}
+
+.space{
+    margin: 0 10px 0 30px;
 }

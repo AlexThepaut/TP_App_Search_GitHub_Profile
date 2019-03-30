@@ -1,16 +1,38 @@
-<mat-tab-group>
-    <mat-tab label="Followers">
-        <mat-grid-list cols="4" rowHeight="120px">
-            <mat-grid-tile *ngFor="let follower of followers">
-                <p>{{follower?.login}}</p><br>
-            </mat-grid-tile>
-        </mat-grid-list>
-    </mat-tab>
-    <mat-tab label="Repository">
-        <mat-list cols="6" rowHeight="80px">
-            <mat-list-item *ngFor="let repo of repos">
-                <app-repo-github [repo]="repo"></app-repo-github>
-            </mat-list-item>
-        </mat-list>
-    </mat-tab>
-</mat-tab-group>
+<div class="container">
+    <div class="navbar">
+        <button mat-button (click)="toHome()" class="navbar__button">
+            <mat-icon>keyboard_arrow_left</mat-icon>Chercher un autre utilisateur
+        </button>
+    </div>
+    <div class="user">
+        <div class="user__profile">
+            <div class="user__profile-text">
+                <h1 class="user__name">{{user?.login}}</h1>
+                <h2>{{user?.location}}</h2>
+                <h2>{{user?.country}}</h2>
+                <h2>{{user?.type}}</h2>
+                <p>
+                    {{user?.bio}}
+                </p>
+            </div>
+            <img src="{{user?.avatar_url}}" alt="avatar user" class="user__img">
+        </div>
+    </div>
+    <mat-divider></mat-divider>
+    <mat-tab-group>
+        <mat-tab label="Followers">
+            <mat-list>
+                <mat-list-item *ngFor="let follow of followers">
+                    <app-follow-github [follow]="follow"></app-follow-github>
+                </mat-list-item>
+            </mat-list>
+        </mat-tab>
+        <mat-tab label="Repository">
+            <mat-list>
+                <div *ngFor="let repo of repos" class="repo__list">
+                    <app-repo-github [repo]="repo"></app-repo-github>
+                </div>
+            </mat-list>
+        </mat-tab>
+    </mat-tab-group>
+</div>

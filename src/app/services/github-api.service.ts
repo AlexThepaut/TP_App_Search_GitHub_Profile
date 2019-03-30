@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-const API_BASE_URL: string = 'https://api.github.com/';
-const API_USERS: string = 'users/';
+const API_BASE_URL = 'https://api.github.com/';
+const API_USERS = 'users/';
 
 @Injectable({
   providedIn: 'root'
@@ -14,11 +14,11 @@ export class GithubApiService {
     return this.http.get(`${API_BASE_URL}${API_USERS}${login}`);
   }
 
-  getUserRepo(login: string){
+  getUserRepo(login: string) {
     return this.http.get(`${API_BASE_URL}${API_USERS}${login}/repos`);
   }
 
-  getUserFollowers(login: string){
+  getUserFollowers(login: string) {
     return this.http.get(`${API_BASE_URL}${API_USERS}${login}/followers`);
   }
 }

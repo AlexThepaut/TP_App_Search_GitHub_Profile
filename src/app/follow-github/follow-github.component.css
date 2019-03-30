@@ -1,0 +1,21 @@
+.follower__name{
+    cursor: pointer;
+}
+
+.follower__name:hover{
+    color: hotpink;
+}
+
+.follower-container{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.follower__img{
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 20%;
+    border: 2px solid lightgrey;
+}
