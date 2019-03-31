@@ -33,7 +33,6 @@ export class UserPageComponent implements OnInit {
       );
       this.apiGithub.getUserRepo(userToSearch).subscribe(
         data => {
-          console.log(data);
           this.repos = data;
         }
       );

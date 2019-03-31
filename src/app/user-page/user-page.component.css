@@ -1,5 +1,5 @@
 .container{
-    width: 800px;
+    max-width: 800px;
     margin: auto;
     min-height: 100vh;
     background-color:rgba(245, 245, 245, 0.87);
@@ -16,6 +16,8 @@
     background-color: rgba(209, 209, 209, 0.4);
     display: flex;
     align-items: baseline;
+    border: 1px solid lightgrey;
+
 }
 
 .navbar__button{
@@ -36,9 +38,26 @@
 
 .user__profile{
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .repo__list{
     margin: 20px 0;
+}
+
+@media (max-width: 600px) { 
+    .user__img{
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+        max-height: 300px;
+        border-radius: 5%;
+        border: 1px solid lightgrey;
+    }
+    
+    .user__profile{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+    }
 }
