@@ -17,7 +17,8 @@ import {
   MatGridListModule,
   MatIconModule,
   MatListModule,
-  MatDividerModule
+  MatDividerModule,
+  MatTooltipModule
 } from '@angular/material';
 import { RepoGithubComponent } from './repo-github/repo-github.component';
 import { FollowGithubComponent } from './follow-github/follow-github.component';
@@ -43,7 +44,8 @@ import { FollowGithubComponent } from './follow-github/follow-github.component';
     MatGridListModule,
     MatIconModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

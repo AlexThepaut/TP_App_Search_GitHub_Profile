@@ -4,10 +4,10 @@
         <a class="repo__info">
             <a class="repo__langage">{{repo?.language}}</a>
             <div>
-                <span class="repo__info repo__forks">
+                <span class="repo__info repo__forks" matTooltip="Forks" matTooltipPosition="above">
                     <mat-icon class="space">merge_type</mat-icon> {{repo?.forks}}
                 </span>
-                <span class="repo__info repo__watchers">
+                <span class="repo__info repo__watchers" matTooltip="Watchers" matTooltipPosition="below">
                     <mat-icon class="space">remove_red_eye</mat-icon>{{repo?.watchers}}
                 </span>
             </div>
