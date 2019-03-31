@@ -22,6 +22,7 @@ import {
 } from '@angular/material';
 import { RepoGithubComponent } from './repo-github/repo-github.component';
 import { FollowGithubComponent } from './follow-github/follow-github.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FollowGithubComponent } from './follow-github/follow-github.component';
     HomePageComponent,
     UserPageComponent,
     RepoGithubComponent,
-    FollowGithubComponent
+    FollowGithubComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
