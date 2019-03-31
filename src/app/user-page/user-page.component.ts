@@ -28,7 +28,7 @@ export class UserPageComponent implements OnInit {
           this.user = data;
         },
         (error) => {
-          this.router.navigate([PATH_HOME]);
+          this.router.navigate([PATH_HOME, error.status]);
         }
       );
       this.apiGithub.getUserRepo(userToSearch).subscribe(
